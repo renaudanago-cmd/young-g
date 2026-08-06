@@ -1,45 +1,139 @@
 <!DOCTYPE html>
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>The TeAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Group Energy - Young Generation</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https;//fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="styleshet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
-        <button class="menu-toggle">☰</button>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                 <li><a href="activities.html">Activities</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+<body>
+    <!--======================================================================================
+    NAVIGATION
+    ==========================================================================================-->
 
-        <header class="gallery-header">
-            <h1>Group Energy</h1>
-            <p>Together, we create memories that last forever.</p>
-        </header>
+    <nav>
+        <h2> YG Photography</h2>
+        <button class="menu-toggle">&#9776</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-        <header>
+    </nav>
 
-            <section class="photo-gallery">
-                <img src="images/gallery/group/photo1.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo2.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo3.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo4.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo5.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo6.jpg" alt="Young Generation group">
-                <img src="images/gallery/group/photo7.jpg" alt="Young Generation group">
-            </section>
+    <!--================================================================================================
+    HERO PORTRAITS
+    ============================================================================-->
 
-        </header>
-        <script src="script.js"></script>
-    </body>
+    <section class="category-hero group-hero">
+        <div class="overlay">
+
+            <div class="hero-content">
+                <h1>Group Collection</h1>
+                <span class="hero-line"></span>
+                <p>
+                    Celebrating connection, frienship and unforgettable moments
+                    through vibrant group photography
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--=======================================================================================
+    PORTRAITS GALLERY
+    ===========================================================================================-->
+
+    <section class="photo-gallery">
+
+
+    <img src="images/gallery/group/photo1.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo2.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo3.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo4.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+
+    <img src="images/gallery/group/photo5.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo6.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo7.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo8.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+
+    <img src="images/gallery/group/photo9.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo10.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo11.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+    <img src="images/gallery/group/photo12.jpg" class="lightbox-item" alt="Group" loading="lazy">
+
+
+</section>
+
+<!--==================================================
+ LIGHTBOX
+==================================================-->
+
+<div class="lightbox">
+
+
+    <span class="lightbox-close">&times;</span>
+
+
+    <button class="lightbox-prev">
+        ❮
+    </button>
+
+
+    <img class="lightbox-image" src="" alt="">
+
+
+    <button class="lightbox-next">
+        ❯
+    </button>
+
+
+    <a href="gallery.html" class="lightbox-see-more">
+        Back to Gallery
+    </a>
+
+
+</div>
+
+
+<!--==================================================
+ FOOTER
+==================================================-->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Young Generation</h2>
+
+        <p>
+            Photography, creativity and community.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+
+</body>

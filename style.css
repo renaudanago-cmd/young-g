@@ -1,20 +1,36 @@
-body{
+/*========================================================================================
+STYLE Général
+====================================================================================*/
+
+html,body{
     font-family: "Poppins", sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 h1{
     color:  #1e3a8a;
 }
 
+
 h2{
     color: #1f2937;
 }
 
+
 p{
     color: #f5f5f5;
 }
+
+/*=============================================================================
+MENU DE NAVIGATION
+===============================================================================*/
+
 
 nav{
     position: absolute;
@@ -54,6 +70,10 @@ nav a:hover {
 
 }
 
+/*==========================================================================================
+SECTION HERO
+===========================================================================================*/
+
 .hero {
     height: 500px;
     background-image: url("images/hero/photo.jpg");
@@ -63,7 +83,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -81,7 +101,8 @@ nav a:hover {
 }
 
 .overlay {
-    background-color: rgba(0 , 0 , 0 , 0.45);
+    background-color: rgba(0,0,0,0.45);
+    background:linear-gradient( rgba(0,0,0,0.35),rgba(0,0,0,0.35));
     width: 100%;
     height: 100%;
     display: flex;
@@ -98,7 +119,7 @@ nav a:hover {
 
 .hero-content{
     color: white;
-    animation: fadeIn 1.5s ease;
+    animation:heroAppear 1.2s ease;
 }
 
 .hero-content a {
@@ -109,6 +130,7 @@ nav a:hover {
     font-size: 64px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-shadow:0 5px 20px rgba(0,0,0,.5);
 }
 
 .hero-content p {
@@ -117,7 +139,12 @@ nav a:hover {
     max-width: 650px;
     margin: auto;
     margin-bottom: 30px;
+    text-shadow:0 5px 20px rgba(0,0,0,.5);
 }
+
+/*==========================================================================
+SECTION ABOUT
+============================================================================*/
 
 .about {
     display: flex;
@@ -147,6 +174,10 @@ nav a:hover {
     line-height: 1.8;
     color: #444;
 }
+
+/*==============================================================================
+CATEGORIES
+================================================================================*/
 
 .categories {
     padding: 100px 20px;
@@ -206,10 +237,14 @@ nav a:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18)
 }
+
 .category-card:hover .card-overlay {
     opacity: 1;
 }
 
+/*==============================================================================
+FEATURED MOMENTS
+================================================================================*/
 
 .featured-container {
     display: flex;
@@ -229,6 +264,10 @@ nav a:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0 , 0 , 0 , 0.3);
 }
+
+/*===================================================================================
+GALERIE PHOTO
+====================================================================================*/
 
 .gallery-header{
     text-align: center;
@@ -252,36 +291,49 @@ nav a:hover {
     height: 400px;
     object-fit: cover;
     border-radius: 15px;
-    transition: 0.3s;
+    transition:all 0.4s ease;
     animation: slideUp 0.8s ease;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
 .photo-gallery img:hover{
-    transform: scale(1.03);
+    transform:scale(1.05)translateY(-5px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.20);
 }
 
+/*=========================================================================
+RESPONSIVE MOBILE
+===========================================================================*/
+
+
 @media (max-width: 768px) {
+    body, html {
+        overflow-x: hidden;
+    }
     .about {
         flex-direction: column;
         text-align: center;
         padding: 40px 20px;
+        width: 100%;
     }
 
     .about-image img{
         width:100px;
-        max-width:350px;
+        max-width:100px;
+        height: auto;
     }
 
     .about-content {
-        max-width: 100%;
+        max-width:100%;
+        width:100%;
     }
 
     nav  {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
         flex-wrap:wrap;
-        padding:10px 20px;
+        padding:10px 10px;
     }
 
      nav h2{
@@ -296,33 +348,61 @@ nav a:hover {
         color:white;
         font-size:32px;
         cursor:pointer;
+        margin-right:0;
     }
 
     .nav-links{
-        display:none;
+        display:flex;
         flex-direction:column;
         width:100%;
         background-color:rgba(0,0,0,0.7);
-        margin-top: 20px;
-        padding: 20px 0;
+        background:linear-gradient(rgba(37,99,235,0.85) rgba(17,24,39,0.95));
+        backdrop-filter: blur(8px);
+        margin-top:20px;
+        padding:15px 0;
+        max-height:0;
+        overflow: hidden;
+        opacity:0;
+        transform: translateY(-15px);
+        transition: all 0.4s ease;
     }
 
-     .nav-links.active{
-        display:flex;
+     .nav-links.active {
+        max-height: 400px;
+        padding:20px 0;
+        opacity:1;
+        transform:translateY(0);
+      }
+      .nav-links li{
+        opacity: 0;
+        margin:20px 0;
+        transform:translateY(-10px);
+        transition:0,3s ease;
+    }
+    .nav-links.active li{
+        opacity:1;
+        transform: translateY(0);
     }
 
-    nav li{
+    .nav li{
         display: block;
         list-style:none;
-        margin:15px 0;
+        margin: 0;
         text-align:center;
     }
-
+    
+    
     .hero {
         height: 400px;
         background-image: url("images/hero/photo-mobile.jpg");
         background-size: cover;
         background-position: center;
+        width: 100%;
+    }
+    .hero-content{
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
     }
     .hero-content h1 {
         font-size:38px;
@@ -337,9 +417,11 @@ nav a:hover {
        gap: 15px;
     }
     .featured-container img {
-        width: 45%;
-        height: 220px;
+        max-width: 100%;
+        height: auto;
         object-fit: contain;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0, 0.15);
     }
     .category-container {
         grid-template-columns: repeat(2,1fr);
@@ -349,13 +431,14 @@ nav a:hover {
         grid-template-columns: repeat(2,1fr);
     }
     .photo-gallery img {
-        width:100%;
-        height:220px;
+        max-width:100%;
+        height:auto;
     }
     .gallery-header {
         width: 100%;
         text-align: center;
-    }
+        padding-top: 120px;
+    } 
     .gallery-header h1 {
         font-size: 34px;
         text-align: center;
@@ -375,6 +458,7 @@ nav a:hover {
     }
     .hero-content a {
         padding: 12px 25px;
+        transform: translateY(80px);
     } 
     .card-overlay {
         opacity: 1;
@@ -386,13 +470,13 @@ nav a:hover {
 
 .activity-card,
 .activity-card.reverse{
-    flex-direction:column;
+    flex-direction:column !important;
     text-align:center;
 }
 
 .activity-card img{
     width:100%;
-    max-width: 400px;
+    max-width:400px;
     height:250px;
 }
 
@@ -403,54 +487,100 @@ nav a:hover {
 .contact-info p{
     font-size:16px;
 }
+.footer-content h2{
+    font-size: 26px;
+}
+.footer-links{
+    gap: 18px;
+}
+
+
  }   
 
  .category-card:hover .card-overlay {
     opacity: 1;
 }
 
+/*==============================================================================
+PIED DE PAGE
+================================================================================*/
+
 footer {
     background-color: #111827;
     color: white;
     text-align: center;
-    padding: 50px 20px;
+    padding: 70px 20px 40px;
+}
+
+.footer-content{
+    max-width:700px;
+    margin: auto;
 }
 
 .footer-content h2 {
     color: white;
-    margin-bottom: 15px;
+    font-size:32px;
+    margin-bottom:20px;
+    letter-spacing:2px;
 }
 
 .footer-content p {
-    font-style: italic;
-    font-size: 18px;
+    font-size:17px;
     color: #d1d5db;
-    max-width: 600px;
-    line-height: 1.6;
-    margin: auto;
+    max-width:500px;
+    line-height:1.8;
+    margin:0 auto 30px;
+    text-align: center;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
 }
 
 .footer-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 .footer-links a:hover {
     color: #60a5fa;
+    transform: translateY(-2px);
 }
 
 .copyright {
-    margin-top: 30px;
     font-size: 14px;
-    color: #888;
+    margin-top: 20px;
+    color: #9ca3af;
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-top: 25px;
+    margin-top: 20px;
 }
+
+/*========================================================================
+ANIMATIONS
+==========================================================================*/
+@keyframes heroAppear {
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -461,6 +591,7 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -468,17 +599,21 @@ footer {
 
 }
 
+/*=======================================================================
+PAGE ACTIVITIES
+=========================================================================*/
+
 .activities-container{
     max-width:1100px;
     margin:80px auto;
-    padding:20px;
+    padding:10px;
 }
 
 .activity-card{
     display:flex;
     align-items:center;
-    gap:40px;
-    margin-bottom:70px;
+    gap:60px;
+    margin-bottom:50px;
 }
 
 .activity-card.reverse{
@@ -494,6 +629,7 @@ footer {
 
 .activity-text{
     flex:1;
+    text-align: justify;
 }
 
 .activity-text h2{
@@ -505,6 +641,11 @@ footer {
     line-height:1.8;
     font-size:18px;
 }
+
+/*==============================================================================
+PAGE CONTACT
+================================================================================*/
+
 
 .contact-container{
     max-width:900px;
@@ -536,4 +677,290 @@ footer {
 .contact-info p{
     margin:15px 0;
     font-size:18px;
+}
+
+/*==============================================================================
+ANIMATION AU SCROLL
+================================================================================*/
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.delay{
+    transition-delay: 0.60s;
+}
+
+/*===========================================================================
+=============================================================================
+HERO DES PAGES DE CATEGORIES
+=============================================================================
+=============================================================================*/
+
+.category-hero{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center 15%;
+}
+
+.portraits-hero{
+
+    background-image: url("images/gallery/portraits/IMG_3068.jpg");
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+.street-hero{
+    background-image: url("images/gallery/street/photo1.jpg");
+    background-position: center 20%;
+    animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+.creative-hero{
+    background-image: url("images/gallery/creative/cover.jpg");
+    background-position: center top 10%;
+     animation: heroZoom 8s ease-in-out infinite alternate;
+}
+.group-hero{
+    background-image: url("images/gallery/group/cover.jpg");
+    background-position: center top 15%;
+     animation: heroZoom 8s ease-in-out infinite alternate;
+}
+
+
+@keyframes heroZoom {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+    }
+}
+
+/*=========================================================================
+STYLE TITRE HERO DES CATEGORIES
+===========================================================================*/
+
+.category-title h1 {
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: titleAppear 1.2s ease;
+}
+
+.hero-line {
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #60a5fa;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.category-title p {
+    color: white;
+    font-size: 20px;
+    max-width: 650px;
+    line-height: 1.6;
+    margin: auto;
+    animation: titleAppear 1.5s ease;
+}
+
+@keyframes titleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*============================================================================
+LIGHTBOX
+==============================================================================*/
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/*============================================================================
+BLOCAGE DU SCROLL QUAND LA LIGHTBOX EST OUVERTE
+==============================================================================*/
+
+.no-croll {
+    overflow: hidden;
+}
+/* Bouton de fermeture */
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+    top: 15%;
+    right: 20px;
+    font-size: 38px;
+}
+
+/* Image affichée */
+
+.lightbox-image{
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+}
+
+/* Bouton précédent / suivant */
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: none;
+    border: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    padding: 10px;
+}
+
+.lightbox-prev {
+    left: 30px;
+}
+.lightbox-next{
+    right: 30px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: #60a5fa;
+}
+
+/* Bouton See More */
+
+.lightbox-see-more{
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.lightbox-see-more:hover{
+
+    background-color: #1d4ed8;
+    transform:translateX(-1px);
+}
+
+
+/*==============================================================================
+APERçU DES CATEGORIES (GALERIE FILTRABLE)
+==============================================================================*/
+
+.category-preview {
+
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+.preview-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.preview-container img {
+
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.see-more {
+    display: inline-block;
+    margin-top: 30px;
+
+    background: #2563eb;
+    color: white;
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+}
+
+.see-more :hover {
+    background: #1d4ed8;
+    transform: translateX(+2);
+    transition: 0.3s ease;
+}
+* {
+    box-sizing: border-box;
 }

@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="styleshet">
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
         <nav>
             <button class="menu-toggle">☰</button>
@@ -31,42 +32,73 @@
         <section class="featured">
             <h2>Featured Moments</h2>
             <div class="featured-container">
-                <img src="images/gallery/featured/Best 1.jpg" alt="Young Generation moment">
-                <img src="images/gallery/featured/Best 2.jpg" alt="Young Generation moment">
-                <img src="images/gallery/featured/IMG_0767.jpg" alt="Young Genaration moment">
+                <img src="images/gallery/featured/Best 1.jpg" alt="Young Generation moment"class="lightbox-item">
+                <img src="images/gallery/featured/Best 2.jpg" alt="Young Generation moment" class="lightbox-item">
+                <img src="images/gallery/featured/IMG_0767.jpg" alt="Young Genaration moment" class="lightbox-item">
             </div>
         </section>
 
         <section>
             <section class="categories">
-            <h2>Explore Our Worlds</h2>
+            <h2>Explore  Our  World</h2>
+
             <div class="category-container">
-                <a href="portraits.html" class="category-card">
+
+
+                <a href="portraits.html" class="category-card hidden" data-category="portraits">
                     <img src="images/gallery/portraits/cover.jpg" alt="Portraits">
                     <div class="card-overlay">
                         <h3>Portraits</h3>
                     </div>
                 </a>
-                <a href="street.html" class="category-card">
+                <a href="street.html" class="category-card hidden" data-category="street">
                     <img src="images/gallery/street/cover.jpg" alt="Street Moments">
                     <div class="card-overlay">
+
                         <h3>Street Moments</h3>
                     </div>
                 </a>
-                <a href="group.html" class="category-card">
+
+                <a href="group.html" class="category-card hidden" data-category="group">
                     <img src="images/gallery/group/cover.jpg" alt="Group Energy">
                     <div class="card-overlay">
                         <h3>Group Energy</h3>
                     </div>
                 </a>
-                <a href="creative.html" class="category-card">
+
+                <a href="creative.html" class="category-card hidden" data-category="creative">
                     <img src="images/gallery/creative/cover.jpg" alt="Creative Sessions">
                     <div class="card-overlay">
+
                         <h3>Creative Sessions</h3>
                     </div>
                 </a>
+
+
             </div>
+
+
+            <section class="category-preview">
+                <h2 class="preview-title"></h2>
+                <div class="preview-container">
+
+                    <!-- Les photos seront ajoutées ici par javaScript-->
+                </div>
+
+            </section>
         </section>
+
+        <div class="lightbox">
+
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-prev"><<</button>
+            <img class="lightbox-image" src="" alt="">
+            <button class="lightbox-next">>></button>
+            <a href="#" class="lightbox-see-more" href="#">See more</a>
+            
+        </div>
+
     </body>
+
     <script src="script.js"></script>
 </html>

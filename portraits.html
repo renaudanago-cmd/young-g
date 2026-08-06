@@ -1,40 +1,136 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Portraits - Young Generation</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https;//fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="styleshet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <button class="menu-toggle">☰</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                 <li><a href="activities.html">Activities</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <header class="gallery-header">
-            <h1>Portraits</h1>
-            <p>Every face tells a story worth remembering.</p>
-        </header>
-            <section class="photo-gallery">
-                <img src="images/gallery/portraits/photo1.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo2.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo3.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo4.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo5.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo6.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo7.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo8.jpg" alt="Portrait">
-                <img src="images/gallery/portraits/photo9.jpg" alt="Portrait">
-            </section>
-            <script src="script.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portrairs Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<>
+    <!--======================================================================================
+    NAVIGATION
+    ==========================================================================================-->
+
+    <nav>
+        <h2> YG Photography</h2>
+        <button class="menu-toggle">&#9776</button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <!--================================================================================================
+    HERO PORTRAITS
+    ============================================================================-->
+
+    <section class="category-hero portraits-hero">
+        <div class="overlay">
+
+            <div class="hero-content">
+                <h1>Portraits Collection</h1>
+                <span class="hero-line"></span>
+                <p>
+                    Discover emotions, personalities and stories captured through our portraits
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--=======================================================================================
+    PORTRAITS GALLERY
+    ===========================================================================================-->
+
+    <section class="photo-gallery">
+
+
+    <img src="images/gallery/portraits/photo1.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo2.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo3.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo4.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+
+    <img src="images/gallery/portraits/photo5.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo6.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo7.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo8.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+
+    <img src="images/gallery/portraits/photo9.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo10.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo11.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+    <img src="images/gallery/portraits/photo12.jpg" class="lightbox-item" alt="Portrait" loading="lazy">
+
+
+</section>
+
+<!--==================================================
+ LIGHTBOX
+==================================================-->
+
+<div class="lightbox">
+
+
+    <span class="lightbox-close">&times;</span>
+
+
+    <button class="lightbox-prev">
+        ❮
+    </button>
+
+
+    <img class="lightbox-image" src="" alt="">
+
+
+    <button class="lightbox-next">
+        ❯
+    </button>
+
+
+    <a href="gallery.html" class="lightbox-see-more">
+        Back to Gallery
+    </a>
+
+
+</div>
+
+
+<!--==================================================
+ FOOTER
+==================================================-->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Young Generation</h2>
+
+        <p>
+            Photography, creativity and community.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
 </html>
+
+</body>
