@@ -349,6 +349,10 @@ RESPONSIVE MOBILE
         font-size:32px;
         cursor:pointer;
         margin-right:0;
+        transform:transform 0.4s ease;
+    }
+    .menu-toggle.is-open{
+        transform:rotate(90deg);
     }
 
     .nav-links{
@@ -356,10 +360,11 @@ RESPONSIVE MOBILE
         flex-direction:column;
         width:100%;
         background-color:rgba(0,0,0,0.7);
-        background:linear-gradient(rgba(37,99,235,0.85) rgba(17,24,39,0.95));
-        backdrop-filter: blur(8px);
+        background:linear-gradient(135deg, rgba(30, 58, 138, 0.94), rgba(17, 24, 39, 0.96));
+        backdrop-filter: blur(10px);
         margin-top:20px;
         padding:15px 0;
+        gap:20px;
         max-height:0;
         overflow: hidden;
         opacity:0;
@@ -375,7 +380,7 @@ RESPONSIVE MOBILE
       }
       .nav-links li{
         opacity: 0;
-        margin:20px 0;
+        margin:0;
         transform:translateY(-10px);
         transition:0,3s ease;
     }
@@ -384,7 +389,7 @@ RESPONSIVE MOBILE
         transform: translateY(0);
     }
 
-    .nav li{
+    .nav-links li{
         display: block;
         list-style:none;
         margin: 0;
@@ -425,6 +430,11 @@ RESPONSIVE MOBILE
     }
     .category-container {
         grid-template-columns: repeat(2,1fr);
+    }
+    .card-overlay h3 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        text-align: center;
     }
     .photo-gallery {
         display: grid;
@@ -961,6 +971,7 @@ APERçU DES CATEGORIES (GALERIE FILTRABLE)
     transform: translateX(+2);
     transition: 0.3s ease;
 }
+
 * {
     box-sizing: border-box;
 }
