@@ -504,6 +504,60 @@ RESPONSIVE MOBILE
     gap: 18px;
 }
 
+/* TEAM & TALENTS MOBILE */
+
+.team-hero{
+    height:400px;
+}
+
+.team-hero-content h1{
+    font-size:38px;
+    letter-spacing:2px;
+}
+
+.team-hero-content p{
+    font-size:17px;
+    padding:0 20px;
+}
+
+.team-section{
+    padding:70px 20px;
+}
+
+.team-header h2,
+.talents-header h2{
+    font-size:32px;
+}
+
+.team-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    width:100%;
+    text-align:center;
+}
+.team-card{
+    width: 100%;
+}
+
+.team-card img{
+    height:320px;
+    object-fit:contain;
+    object-position:center;
+    display:block;
+}
+
+.talents-section{
+    padding:70px 20px;
+}
+
+.talents-container{
+    grid-template-columns:1fr;
+}
+
+.talent-card{
+    padding:25px;
+}
 
  }   
 
@@ -687,6 +741,234 @@ PAGE CONTACT
 .contact-info p{
     margin:15px 0;
     font-size:18px;
+}
+
+/*==============================================================================
+PAGE TEAM & TALENTS
+==============================================================================*/
+
+.team-hero{
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    background-image:url("images/team/cover.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.team-hero-overlay{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,0.45);
+}
+
+.team-hero-content{
+    color:white;
+    animation:heroAppear 1.2s ease;
+}
+
+.team-hero-content h1{
+    color:white;
+    font-size:56px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.team-hero-content p{
+    color:white;
+    font-size:20px;
+    max-width:650px;
+    line-height:1.6;
+    margin:auto;
+}
+
+
+/*==============================================================================
+TEAM
+==============================================================================*/
+
+.team-section{
+    padding:90px 20px;
+}
+
+.team-header{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 60px;
+}
+
+.team-header h2{
+    font-size:42px;
+    color:#1f2937;
+    margin-bottom:15px;
+}
+
+.team-header p{
+    color:#555;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.team-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.team-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:all .35s ease;
+}
+
+.team-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.team-card img{
+    width:100%;
+    height:330px;
+    object-fit:contain;
+    display:block;
+}
+
+.team-info{
+    padding:25px;
+    text-align:center;
+}
+
+.team-info h3{
+    margin:0 0 8px;
+    font-size:23px;
+    color:#1f2937;
+}
+
+.team-role{
+    display:block;
+    width:100%;
+    text-align:center;
+    color:#2563eb;
+    font-size:14px;
+    font-weight:600;
+    margin:0 auto 15px;
+}
+
+.team-info p{
+    color:#666;
+    font-size:15px;
+    line-height:1.7;
+    margin:0;
+}
+
+.talent-badge{
+    display:block;
+    width:fit-content;
+    margin:18px auto 0;
+    padding:7px 12px;
+    border-radius:20px;
+    background:#eff6ff;
+    color:#2563eb;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.5px;
+    text-align:center;
+}
+
+
+/*==============================================================================
+YG TALENTS
+==============================================================================*/
+
+.talents-section{
+    background:#f1f5f9;
+    padding:90px 20px;
+}
+
+.talents-header{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 50px;
+}
+
+.talents-header h2{
+    font-size:42px;
+    color:#1f2937;
+    margin-bottom:15px;
+}
+
+.talents-header p{
+    color:#555;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.talents-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.talent-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    transition:all .3s ease;
+}
+
+.talent-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.talent-card h3{
+    color:#1f2937;
+    font-size:23px;
+    margin:0 0 8px;
+}
+
+.talent-card span{
+    color:#2563eb;
+    font-weight:600;
+    font-size:15px;
+}
+
+.talent-card p{
+    color:#666;
+    line-height:1.7;
+    margin:15px 0 20px;
+}
+
+.talent-card a{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:10px 22px;
+    border-radius:25px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s ease;
+}
+
+.talent-card a:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
 }
 
 /*==============================================================================
@@ -974,4 +1256,32 @@ APERçU DES CATEGORIES (GALERIE FILTRABLE)
 
 * {
     box-sizing: border-box;
+}
+
+/*==========================================================================
+============================================================================
+TEAM AND TALENTS - MOBILE
+============================================================================
+============================================================================*/
+@media (max-width: 768px) {
+
+    .team-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        gap: 25px;
+    }
+    .team-card{
+        width: 100%;
+    }
+    .team-card img{
+        width: 100%;
+        height: 320px;
+        object-fit: contain;
+        object-position: center;
+    }
+    .talents-container{
+        grid-template-columns: 1fr;
+    }
 }
